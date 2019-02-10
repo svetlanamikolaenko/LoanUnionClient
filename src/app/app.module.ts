@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 //serveces
 import {CustomerService} from './customer.service';
 import { AppRouterModule } from './app-router.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AppRouterModule } from './app-router.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRouterModule
   ],
   providers: [CustomerService],
