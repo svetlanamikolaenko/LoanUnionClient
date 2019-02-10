@@ -5,20 +5,23 @@ import { AppComponent } from './app.component';
 import { CustomersComponent } from './customers/customers.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { CustomerComponent } from './customer/customer.component';
+
+//serveces
+import {CustomerService} from './customer.service';
+import { AppRouterModule } from './app-router.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomersComponent,
     FooterComponent,
-    HeaderComponent,
-    CustomerComponent
+    HeaderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRouterModule
   ],
-  providers: [],
+  providers: [CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
