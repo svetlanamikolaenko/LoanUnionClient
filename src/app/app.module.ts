@@ -6,10 +6,11 @@ import { CustomersComponent } from './customers/customers.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 
-//serveces
+//services
 import {CustomerService} from './customer.service';
 import { AppRouterModule } from './app-router.module';
 import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [

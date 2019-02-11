@@ -11,7 +11,7 @@ export class CustomersComponent implements OnInit {
   constructor(private service: CustomerService ) { }
 
   ngOnInit() {
-    this.service.getAll().subscribe((data)=>{
+    this.service.getAll().subscribe((data) => {
       console.log('Result - ', data);
     })
   }
