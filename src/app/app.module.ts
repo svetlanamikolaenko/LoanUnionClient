@@ -11,6 +11,12 @@ import {CustomerService} from './customer.service';
 import { AppRouterModule } from './app-router.module';
 import { HttpClientModule } from '@angular/common/http';
 
+//material design
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatTableModule} from '@angular/material/table';
+
+
 
 @NgModule({
   declarations: [
@@ -22,6 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
+    //material design
+    BrowserAnimationsModule, MatButtonModule, MatTableModule,
     AppRouterModule
   ],
   providers: [CustomerService],
