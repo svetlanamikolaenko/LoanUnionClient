@@ -21,6 +21,10 @@ export class CustomersComponent implements OnInit {
       console.log('Result - ', data);
       this.dataSource = new MatTableDataSource<CustomerElement>(data as CustomerElement[])
     })
-  }
-
+  
 }
+  updateCustomer(customer){
+    console.log(customer);
+  }
+}
+
