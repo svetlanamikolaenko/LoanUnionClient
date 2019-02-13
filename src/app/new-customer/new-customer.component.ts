@@ -19,7 +19,6 @@ export class NewCustomerComponent  {
 customerForm = new FormGroup({
   firstName: new FormControl('', Validators.required),
   lastName: new FormControl('', Validators.required),
-  dateOfBirth: new FormControl('', Validators.required),
   salary: new FormControl('', [Validators.required, Validators.pattern('\\d+\\.?\\d*')]),
 })
 

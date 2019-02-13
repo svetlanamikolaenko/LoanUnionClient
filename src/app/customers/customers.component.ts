@@ -11,7 +11,7 @@ import { CustomerElement } from '../interfaces/CustomerElement';
 })
 export class CustomersComponent implements OnInit {
 
-  displayedColumns: string[] = ['FirstName', 'LastName', 'DateOfBirth', 'Salary' ]
+  displayedColumns: string[] = ['FirstName', 'LastName', 'DateOfBirth', 'Salary', 'Actions' ]
   dataSource;
 
   constructor(private service: CustomerService ) { }

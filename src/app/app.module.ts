@@ -14,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 //material design
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule, MatSelectModule, MatTableModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule, MatSelectModule, MatTableModule, MatToolbarModule, MatDialogModule} from '@angular/material';
 
 //forms
 import {ReactiveFormsModule} from '@angular/forms';
@@ -36,7 +36,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     //material design
     BrowserAnimationsModule, MatButtonModule, MatTableModule,
     MatInputModule, MatCardModule, MatSelectModule,
-    MatToolbarModule,
+    MatToolbarModule,MatDialogModule,
     AppRouterModule
   ],
   providers: [CustomerService],
