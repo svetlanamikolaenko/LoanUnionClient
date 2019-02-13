@@ -1,0 +1,20 @@
+<mat-card>
+  <span>Create new customer</span>
+  <form [formGroup] = "customerForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class= "new-customer-field" >
+      <input matInput placeholder="Enter your First Name" formControlName = "firstName">
+    </mat-form-field>
+    <mat-form-field class= "new-customer-field">
+      <input matInput placeholder="Enter your Last Name" formControlName = "lastName">
+    </mat-form-field>
+     <mat-form-field class= "new-customer-field" >
+        <input matInput placeholder="Choose a Date" formControlName = "dateOfBirth">  
+    </mat-form-field>
+    <mat-form-field class= "new-customer-field" >
+        <input matInput placeholder="Enter your Salary" formControlName = "salary">
+      </mat-form-field>  
+
+      <button mat-raised-button [disabled]="!customerForm.valid">Create new</button>
+
+  </form>
+</mat-card>

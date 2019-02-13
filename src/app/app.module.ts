@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CustomersComponent } from './customers/customers.component';
+import { NewCustomerComponent } from './new-customer/new-customer.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 
@@ -13,8 +14,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 //material design
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import {MatTableModule} from '@angular/material/table';
+import {MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule, MatSelectModule, MatTableModule, MatToolbarModule} from '@angular/material';
+
+//forms
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -23,13 +26,17 @@ import {MatTableModule} from '@angular/material/table';
     AppComponent,
     CustomersComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    NewCustomerComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
     //material design
     BrowserAnimationsModule, MatButtonModule, MatTableModule,
+    MatInputModule, MatCardModule, MatSelectModule,
+    MatToolbarModule,
     AppRouterModule
   ],
   providers: [CustomerService],
