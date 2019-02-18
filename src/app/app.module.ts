@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CustomersComponent } from './customers/customers.component';
-import { NewCustomerComponent } from './new-customer/new-customer.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 
@@ -14,11 +13,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 //material design
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule, MatSelectModule, MatTableModule, MatToolbarModule, MatDialogModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule, MatSelectModule, MatTableModule, MatToolbarModule, MatDialogModule, MatListModule} from '@angular/material';
+
+import { NewCustomerComponent } from './new-customer/new-customer.component';
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 
 //forms
 import {ReactiveFormsModule} from '@angular/forms';
-
+import { DeleteCustomerComponent } from './delete-customer/delete-customer.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import {ReactiveFormsModule} from '@angular/forms';
     CustomersComponent,
     FooterComponent,
     HeaderComponent,
-    NewCustomerComponent
+    NewCustomerComponent,
+    UpdateCustomerComponent,
+    DeleteCustomerComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +40,11 @@ import {ReactiveFormsModule} from '@angular/forms';
     //material design
     BrowserAnimationsModule, MatButtonModule, MatTableModule,
     MatInputModule, MatCardModule, MatSelectModule,
-    MatToolbarModule,MatDialogModule,
+    MatToolbarModule,MatListModule,
+    MatDialogModule,
     AppRouterModule
   ],
+  entryComponents:[UpdateCustomerComponent],
   providers: [CustomerService],
   bootstrap: [AppComponent]
 })

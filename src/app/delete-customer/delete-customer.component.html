@@ -1,0 +1,37 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Are you sure you want to delete this Customer?</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>
+        <b>First Name: </b> {{customer.firstName}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <b>Last Name: </b> {{customer.lastName}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item >
+        <b>FathersName: </b> {{customer.fathersName}}
+      </mat-list-item>
+     <mat-divider></mat-divider>
+      <mat-list-item >
+        <b>INN: </b> {{customer.uniqueCode}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item >
+        <b>Salary: </b> {{customer.salary}}
+      </mat-list-item>
+     <mat-divider></mat-divider>
+     <mat-list-item >
+      <b>Date of birth: </b> {{customer.dateOfBirth}}
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button (click)="cancel()">Cancel</button>
+    <button mat-raised-button color="warn" (click)="confirm()">Confirm</button>
+  </mat-card-actions>
+</mat-card>

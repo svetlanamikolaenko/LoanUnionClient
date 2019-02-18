@@ -4,12 +4,15 @@ import {RouterModule, Routes} from  '@angular/router';
 import {CustomersComponent} from './customers/customers.component';
 import { NgModule } from '@angular/core';
 import { NewCustomerComponent } from './new-customer/new-customer.component';
+import { DeleteCustomerComponent } from './delete-customer/delete-customer.component';
+
 
 //route
 const routes: Routes = [
     {path:'', component: NewCustomerComponent },
     {path:'customers', component: CustomersComponent},
-    {path:'new-customer', component: NewCustomerComponent}
+    {path:'new-customer', component: NewCustomerComponent},
+    {path:'delete-customer/:id', component: DeleteCustomerComponent}
 
 ]
 

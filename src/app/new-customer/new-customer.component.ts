@@ -17,9 +17,19 @@ export class NewCustomerComponent  {
 
   constructor(private service: CustomerService) { }
 customerForm = new FormGroup({
+  id: new FormControl('', [Validators.required, Validators.pattern('\\d+\\.?\\d*')]),
   firstName: new FormControl('', Validators.required),
   lastName: new FormControl('', Validators.required),
-  salary: new FormControl('', [Validators.required, Validators.pattern('\\d+\\.?\\d*')]),
+  fathersName: new FormControl('', Validators.required),
+  email: new FormControl('', Validators.required),
+  phoneNumber: new FormControl('', Validators.required),
+  uniqueCode: new FormControl('', Validators.required),
+  passportNumber: new FormControl('', Validators.required),
+  passportGivenByWhom: new FormControl('', Validators.required),
+  passportGivenDate: new FormControl('', Validators.required),
+  dateOfBirth: new FormControl('', Validators.required),
+  scanCopy: new FormControl('', Validators.required),
+  salary: new FormControl('', [Validators.required, Validators.pattern('\\d+\\.?\\d*')])
 })
 
 onSubmit(){
