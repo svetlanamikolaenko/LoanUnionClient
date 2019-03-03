@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>Update Customer</h2>
+<mat-dialog-content [formGroup]="form">
+  <mat-form-field class= "new-customer-field" >
+    <input matInput placeholder="Enter your First Name" formControlName = "firstName">
+  </mat-form-field>
+  <br>
+  <mat-form-field class= "new-customer-field">
+    <input matInput placeholder="Enter your Last Name" formControlName = "lastName">
+  </mat-form-field>
+  <br>
+  <mat-form-field class= "new-customer-field" >
+    <input matInput placeholder="Enter your Fathers Name" formControlName = "fathersName">
+</mat-form-field> 
+  <br>
+  <mat-form-field class= "new-customer-field" >
+    <input matInput placeholder="Enter email" formControlName = "email">
+</mat-form-field>
+<br>
+<mat-form-field class= "new-customer-field" >
+    <input matInput placeholder="Enter Phone Number" formControlName = "phoneNumber">
+</mat-form-field>
+<br>
+  <mat-form-field class= "new-customer-field" >
+      <input matInput placeholder="Enter your Salary" formControlName = "salary">
+  </mat-form-field> 
+  <br>  
+  <mat-form-field class= "new-customer-field" >
+      <input matInput placeholder="Enter Passport Number" formControlName = "passportNumber">
+  </mat-form-field>
+  <br>
+   <mat-form-field class= "new-customer-field" >
+      <input matInput placeholder="Enter Passport Given Date" formControlName = "passportGivenDate">
+  </mat-form-field>
+  <br>
+  <mat-form-field class= "new-customer-field" >
+    <input matInput placeholder="Enter Whom was given passport Given" formControlName = "passportGivenByWhom">
+</mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button class="mat-raised-button" (click)="close()">Close</button>
+  <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+</mat-dialog-actions>

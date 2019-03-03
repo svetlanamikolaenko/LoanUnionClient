@@ -1,0 +1,47 @@
+<mat-card>
+  <span>Create new customer</span>
+  <form [formGroup] = "customerForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field class= "new-customer-field" >
+        <input matInput placeholder="Enter Id" formControlName = "id">
+    </mat-form-field>
+    <mat-form-field class= "new-customer-field" >
+      <input matInput placeholder="Enter your First Name" formControlName = "firstName">
+    </mat-form-field>
+    <mat-form-field class= "new-customer-field">
+      <input matInput placeholder="Enter your Last Name" formControlName = "lastName">
+    </mat-form-field>
+    <mat-form-field class= "new-customer-field" >
+        <input matInput placeholder="Enter your Salary" formControlName = "salary">
+    </mat-form-field> 
+    <mat-form-field class= "new-customer-field" >
+        <input matInput placeholder="Enter your Fathers Name" formControlName = "fathersName">
+    </mat-form-field> 
+    <mat-form-field class= "new-customer-field" >
+        <input matInput placeholder="Enter email" formControlName = "email">
+    </mat-form-field>
+    <mat-form-field class= "new-customer-field" >
+        <input matInput placeholder="Enter Phone Number" formControlName = "phoneNumber">
+    </mat-form-field>
+    <mat-form-field class= "new-customer-field" >
+        <input matInput placeholder="Enter your INN" formControlName = "uniqueCode">
+    </mat-form-field>
+    <mat-form-field class= "new-customer-field" >
+        <input matInput placeholder="Enter passportNumber" formControlName = "passportNumber">
+    </mat-form-field>
+    <mat-form-field class= "new-customer-field" >
+        <input matInput placeholder="Enter passportGivenByWhom" formControlName = "passportGivenByWhom">
+    </mat-form-field>
+    <mat-form-field class= "new-customer-field" >
+        <input matInput placeholder="Enter passportGivenDate" formControlName = "passportGivenDate">
+    </mat-form-field>
+    <mat-form-field class= "new-customer-field" >
+        <input matInput placeholder="Enter Date Of Birth" formControlName = "dateOfBirth">
+    </mat-form-field>
+    <mat-form-field class= "new-customer-field" >
+        <input matInput placeholder="Enter Scan Copy" formControlName = "scanCopy">
+      </mat-form-field>
+    <button mat-raised-button [disabled]="!customerForm.valid">Create new</button>
+
+  </form>
+</mat-card>

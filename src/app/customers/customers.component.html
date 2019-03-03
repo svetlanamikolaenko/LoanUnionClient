@@ -1,3 +1,40 @@
-<p>
-  This is customers section! 
-</p>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="Id">
+<th mat-header-cell *matHeaderCellDef> Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.Id}} </td>
+    </ng-container>
+    <ng-container matColumnDef="FirstName">
+        <th mat-header-cell *matHeaderCellDef> FirstName </th>
+        <td mat-cell *matCellDef="let element"> {{element.FirstName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="LastName">
+        <th mat-header-cell *matHeaderCellDef> LastName </th>
+        <td mat-cell *matCellDef="let element"> {{element.LastName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="DateOfBirth">
+        <th mat-header-cell *matHeaderCellDef> DateOfBirth </th>
+        <td mat-cell *matCellDef="let element"> {{element.DateOfBirth}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Salary">
+        <th mat-header-cell *matHeaderCellDef> Salary </th>
+        <td mat-cell *matCellDef="let element"> {{element.Salary}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="Actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element">
+        <button (click)="updateCustomer(element)" mat-raised-button color="primary">
+          <b>Edit</b>
+        </button>
+        <button [routerLink]="['/delete-customer',element.Id]" mat-raised-button color="warn">
+            <b>Delete</b>
+        </button>
+     </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
