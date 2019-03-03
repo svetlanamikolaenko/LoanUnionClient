@@ -1,6 +1,6 @@
 import {RouterModule, Routes} from  '@angular/router';
 
-//component
+
 import { CustomersComponent } from './customers/customers.component';
 import { NgModule } from '@angular/core';
 import { NewCustomerComponent } from './new-customer/new-customer.component';
@@ -16,7 +16,6 @@ const routes: Routes = [
     {path:'delete-customer/:id', component: DeleteCustomerComponent},
     {path:'register', component: RegisterComponent},
     {path:'login', component: LoginComponent},
-
 ]
 
 @NgModule({

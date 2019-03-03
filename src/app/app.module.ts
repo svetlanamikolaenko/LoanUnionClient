@@ -6,6 +6,7 @@ import { CustomersComponent } from './customers/customers.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 
+
 //services
 import { CustomerService } from './customer.service';
 import { AppRouterModule } from './app-router.module';
@@ -27,11 +28,13 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     CustomersComponent,
     FooterComponent,
+
     HeaderComponent,
     NewCustomerComponent,
     UpdateCustomerComponent,
@@ -53,6 +56,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   ],
   entryComponents:[UpdateCustomerComponent],
   providers: [CustomerService, AuthService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
