@@ -17,7 +17,7 @@ export class NewCustomerComponent  {
 
   constructor(private service: CustomerService) { }
 customerForm = new FormGroup({
-  id: new FormControl('', [Validators.required, Validators.pattern('\\d+\\.?\\d*')]),
+  // id: new FormControl('', [Validators.required, Validators.pattern('\\d+\\.?\\d*')]),
   firstName: new FormControl('', Validators.required),
   lastName: new FormControl('', Validators.required),
   fathersName: new FormControl('', Validators.required),

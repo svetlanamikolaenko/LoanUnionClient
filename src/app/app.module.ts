@@ -15,7 +15,8 @@ import { AuthService } from './auth.service';
 
 //material design
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule, MatSelectModule, MatTableModule, MatToolbarModule, MatDialogModule, MatListModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule, MatSelectModule, 
+  MatTableModule, MatToolbarModule, MatDialogModule, MatListModule, MatSortModule, MatPaginatorModule, MatIconModule} from '@angular/material';
 
 //components
 import { NewCustomerComponent } from './new-customer/new-customer.component';
@@ -52,6 +53,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MatToolbarModule,MatListModule,
     MatDialogModule,
     ReactiveFormsModule,FormsModule,
+    MatSortModule, MatPaginatorModule,
+    MatIconModule,
     AppRouterModule
   ],
   entryComponents:[UpdateCustomerComponent],

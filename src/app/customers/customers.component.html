@@ -1,4 +1,8 @@
 
+<mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <ng-container matColumnDef="Id">
 <th mat-header-cell *matHeaderCellDef> Id </th>
@@ -10,7 +14,7 @@
     </ng-container>
     <ng-container matColumnDef="LastName">
         <th mat-header-cell *matHeaderCellDef> LastName </th>
-        <td mat-cell *matCellDef="let element"> {{element.LastName}} </td>
+        <td mat-cell *matCellDef="let element">{{element.LastName}} </td>
     </ng-container>
     <ng-container matColumnDef="DateOfBirth">
         <th mat-header-cell *matHeaderCellDef> DateOfBirth </th>
@@ -25,10 +29,10 @@
         <th mat-header-cell *matHeaderCellDef> Actions </th>
         <td mat-cell *matCellDef="let element">
         <button (click)="updateCustomer(element)" mat-raised-button color="primary">
-          <b>Edit</b>
+            <mat-icon color="white">edit</mat-icon> <b>Edit</b>
         </button>
         <button [routerLink]="['/delete-customer',element.Id]" mat-raised-button color="warn">
-            <b>Delete</b>
+            <mat-icon color="white">delete_sweep</mat-icon><b>Delete</b>
         </button>
      </td>
     </ng-container>
@@ -36,5 +40,5 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
-
+<mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[1, 5, 10, 25, 100]" ></mat-paginator>
 
