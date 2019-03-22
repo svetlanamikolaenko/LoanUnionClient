@@ -1,10 +1,10 @@
 <mat-toolbar color = "primary"> 
   <button mat-button routerLink="/"></button>
-  <button mat-button routerLink="/customers">Customers</button>
-  <button mat-button routerLink="/new-customer">Create new customer</button>
+  <button mat-button  routerLink="/customers">Customers</button>
+  <button mat-button *ngIf="auth.isAuthenticated" routerLink="/new-customer">Create new customer</button>
   <span style="flex: 1 1 auto"></span>
   <button mat-button *ngIf="auth.isAuthenticated" >Welcome {{auth.getUserName}}</button>
-  <button mat-button *ngIf="auth.isAuthenticated" (click)="auth.logout()" >Logout</button>
+  <button mat-button *ngIf="auth.isAuthenticated" (click)="auth.logout()" routerLink="/" >Logout</button>
   <button mat-button *ngIf="!auth.isAuthenticated" routerLink="/register">Register</button>
   <button mat-button *ngIf="!auth.isAuthenticated" routerLink="/login">Login</button>
 

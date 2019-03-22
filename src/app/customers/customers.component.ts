@@ -48,7 +48,6 @@ export class CustomersComponent implements OnInit {
         PassportGivenDate: customer.PassportGivenDate, 
         Salary: customer.Salary        
       }})
-
   }
 }
 
